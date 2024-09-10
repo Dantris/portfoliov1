@@ -17,6 +17,7 @@ const projects = [
     description: "Proshop is a Demo for a white-label e-commerce platform.",
     image: "/image/proshop.jpeg",
     link: "https://proshop-alzt.onrender.com/",
+    github: "https://github.com/Dantris/proshop-demo",
   },
   {
     title: "MyFlix React",
@@ -24,6 +25,7 @@ const projects = [
       "MyFlix is a movie database app built with React incl. Backend.",
     image: "/image/movrea.jpeg",
     link: "https://flourishing-sopapillas-8c4f40.netlify.app/login",
+    github: "https://github.com/Dantris/cf-3-myflix",
   },
   {
     title: "MyFlix Angular",
@@ -31,6 +33,7 @@ const projects = [
       "MyFlix is a movie database app built with Angular incl. Backend.",
     image: "/image/movang.jpeg",
     link: "#",
+    github: "https://github.com/Dantris/myFlix-Angular-client",
   },
 ];
 
@@ -60,6 +63,17 @@ const Projects = () => {
                 <Box display="flex" justifyContent="center" width="100%">
                   <Button size="small" color="primary" href={project.link}>
                     View Project
+                  </Button>
+                </Box>
+                <Box display="flex" justifyContent="center" width="100%" mt={1}>
+                  <Button
+                    size="small"
+                    color="secondary"
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub Repo
                   </Button>
                 </Box>
               </CardActions>
