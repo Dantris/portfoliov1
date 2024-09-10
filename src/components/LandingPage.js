@@ -15,14 +15,18 @@ const LandingPage = () => {
     <Container maxWidth="lg" style={{ padding: "100px 0" }}>
       <Grid container spacing={4} alignItems="center">
         {/* Left side with text */}
-        <Grid item xs={12} md={6}>
-          <Typography variant="h2" gutterBottom align="left">
+        <Grid item xs={12} md={6} textAlign={{ xs: "center", md: "left" }}>
+          <Typography variant="h2" gutterBottom>
             Hello, I'm Adrian Dever
           </Typography>
-          <Typography variant="h5" gutterBottom align="left">
+          <Typography variant="h5" gutterBottom>
             A passionate full-stack developer.
           </Typography>
-          <Box mt={4} display="flex" justifyContent="left">
+          <Box
+            mt={4}
+            display="flex"
+            justifyContent={{ xs: "center", md: "left" }}
+          >
             <Button variant="contained" color="primary" href="#projects">
               See My Projects
             </Button>
@@ -32,7 +36,7 @@ const LandingPage = () => {
         {/* Right side with circular image */}
         <Grid item xs={12} md={6} container justifyContent="center">
           <Avatar
-            alt="Your Name"
+            alt="Adriam"
             src={profileImageUrl}
             sx={{ width: 250, height: 250 }} // Adjust the size of the circle here
           />

@@ -8,6 +8,7 @@ import {
   CardMedia,
   CardActions,
   Button,
+  Box,
 } from "@mui/material";
 
 const projects = [
@@ -35,11 +36,11 @@ const projects = [
 
 const Projects = () => {
   return (
-    <Container id="projects" style={{ padding: "50px 0" }}>
+    <Container id="projects" style={{ padding: "50px 0", textAlign: "center" }}>
       <Typography variant="h4" gutterBottom>
         My Projects
       </Typography>
-      <Grid container spacing={4}>
+      <Grid container spacing={4} justifyContent="center">
         {projects.map((project, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Card>
@@ -56,9 +57,11 @@ const Projects = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small" color="primary" href={project.link}>
-                  View Project
-                </Button>
+                <Box display="flex" justifyContent="center" width="100%">
+                  <Button size="small" color="primary" href={project.link}>
+                    View Project
+                  </Button>
+                </Box>
               </CardActions>
             </Card>
           </Grid>
